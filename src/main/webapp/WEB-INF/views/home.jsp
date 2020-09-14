@@ -83,10 +83,13 @@
 									</c:if>
 									<c:if test="${member != null }">
 										<div>
-											<h5 class="login-heading mb-4">${member.userName}님환영 합니다.</h5>
-											<button id="memberUpdateBtn" type="button">회원정보수정</button>
-											<button id="logoutBtn" type="button">로그아웃</button>
-											<button id="memberDeleteBtn" type="button">회원 탈퇴</button>
+											<h6 class="login-heading mb-4">${member.userName}님 환영합니다!</h6>
+											<button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" id="memberUpdateBtn" type="button">회원정보수정</button>
+											<button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" id="logoutBtn" type="button">로그아웃</button>
+											
+											<div class="text-center">
+												<a class="small" href="member/memberDeleteView">회원 탈퇴</a>
+											</div>
 										</div>
 									</c:if>
 
