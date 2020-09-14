@@ -8,6 +8,7 @@ public class MemberVO {
 	private String userPass;
 	private String userName;
 	private Date regDate;
+	
 	public String getUserId() {
 		return userId;
 	}

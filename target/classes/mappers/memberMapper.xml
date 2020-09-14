@@ -20,6 +20,7 @@
 		SELECT USERID, USERPASS, USERNAME
 		FROM MP_MEMBER
 		WHERE USERID = #{userId}
+
 		<!-- AND USERPASS = #{userPass} -->
 		<!-- ajax로 패스워드를 비교 처리를 하기 때문에 주석 -->
 	</select>
