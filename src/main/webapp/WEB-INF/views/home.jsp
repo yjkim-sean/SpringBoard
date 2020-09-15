@@ -12,8 +12,6 @@
 <link rel="stylesheet" href="resources/css/login.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<a href="/board/list">게시판</a>
-<br />
 <script type="text/javascript">
 	$(document).ready(function(){
 		
@@ -45,9 +43,9 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-9 col-lg-8 mx-auto">
-								<h3 class="login-heading mb-4">Welcome!</h3>
 								<form name='homeForm' method="post" action="/member/login">
 									<c:if test="${member == null}">
+										<h3 class="login-heading mb-4">Welcome!</h3>
 										<div class="form-label-group">
 											<input type="text" id="userId" name="userId" class="form-control" placeholder="Id" required autofocus> 
 											<label for="userId">Id</label>
@@ -66,13 +64,13 @@
 										-->
 											
 										<c:if test="${msg == false}">
-											<p style="color: red;">로그인 실패! 아이디와 비밀번호 확인해주세요.</p>
+											<p style="color: red;">Your login information was incorrect</p>
 										</c:if>
 
 										<button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" 
 														 type="submit">Sign in</button>
 										<button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
-														id="registerBtn" type="button">Register</button>
+														id="registerBtn" type="button">Sign up</button>
 
 										<!--
 										<div class="text-center">
@@ -83,12 +81,15 @@
 									</c:if>
 									<c:if test="${member != null }">
 										<div>
-											<h6 class="login-heading mb-4">${member.userName}님 환영합니다!</h6>
-											<button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" id="memberUpdateBtn" type="button">회원정보수정</button>
-											<button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" id="logoutBtn" type="button">로그아웃</button>
+											<h3 class="login-heading mb-4">Welcome ${member.userName}!</h3>
+											<a href="/board/list">
+												<button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="button">Home</button>
+											</a>
+											<button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" id="memberUpdateBtn" type="button">Settings</button>
+											<button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" id="logoutBtn" type="button">Sign out</button>
 											
 											<div class="text-center">
-												<a class="small" href="member/memberDeleteView">회원 탈퇴</a>
+												<a class="small" href="member/memberDeleteView">Delete my account</a>
 											</div>
 										</div>
 									</c:if>

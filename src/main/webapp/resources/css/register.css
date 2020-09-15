@@ -107,12 +107,12 @@ body {
   color: #777;
 }
 
+.btn-idchk {
+  color: white;
+  background-color: #58ACFA;
+}
+
 .btn-google {
   color: white;
   background-color: #ea4335;
-}
-
-.btn-facebook {
-  color: white;
-  background-color: #3b5998;
 }

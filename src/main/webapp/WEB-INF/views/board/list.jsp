@@ -25,7 +25,6 @@
 		<div>
 			<%@include file="nav.jsp" %>
 		</div>
-		<hr />
 
 		<section id="container">
 			<form role="form" method="get" action="/board/write">
